@@ -139,78 +139,18 @@ int main() {
 #endif
     fastio();
 
-    int T;
-    cin>>T;
-
-
-
-    while(T--)
-    {
-
-       
-         int n;
-         cin>>n;
-
-         vector<int>arr(n,0);
-
-         
-         for(int i=0;i<n;i++)
-         {
-            cin>>arr[i];
-         }
-
-         int ans=0;
-
-         int ind=n-1;
-
-        // debug(ind);
-
-         int l=1;
-
-         int check=5;
-
-         while(check--)
-         {
-            int k=ind-1;
-            int flag=0;
-          
-               for(;k>=max(0,n-2*l);k--)
-               {
-                  debug(k);
-
-                if(arr[k]!=arr[n-1])
-                {
-                    ans++;
-                    flag=1;
-                    break;
-                }
-
-               }
-
-              
-              if(flag)
-              {
-                ind= 2*(k+1)-n;
-               
-              }
-              else
-              {
-                  ind=k+1;
-              }
-              l=n-ind;
-         }
-
-         cout<<ans<<nline;
-
-
-        
-      
-
-         
-
-    }
-
-
+    int n;
+    cout << "n (size of the array you need to sort)= ";
+    cin >> n;
+    vector<int>a(n,0);
+    cout << "Input values of the array : " << endl;
+    for(int i=0; i<n; i++) cin >> a[i];
+    cout << endl << "Original array : ";
+    for(int i=0; i<n; i++) cout << a[i] << " ";
+    sort(a.begin(),a.end());
+    cout << endl << "Sorted array   : ";
+    for(int i=0; i<n; i++) cout << a[i] << " ";
+    return 0;
     
     }
 
