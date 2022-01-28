@@ -21,6 +21,7 @@
 * Kaivalya Shah
 * Shobhit Narayan Tripathi
 * Dhruv Gahoi
+* Tridev Rapeti
 
 
 
